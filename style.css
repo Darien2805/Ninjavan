@@ -12,7 +12,7 @@ body {
 }
 
 input #go {
-    
+
 }
 
 img {
@@ -247,7 +247,7 @@ nav a::before {
     content: '';
     display: block;
     height: 5px;
-    background: black;
+    background: red;
     position: absolute;
     top: -.75em;
     left: 0;
