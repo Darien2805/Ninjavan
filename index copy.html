@@ -92,17 +92,17 @@
         <?php
         }
         ?> -->
-        <div class="way-points-option">
+        <!-- <div class="way-points-option"> -->
             <!-- <input type="checkbox" name="way_points[]" class="way_points" value="600312"> A -->
             <!-- <input type="checkbox" name="way_points[]" class="way_points" value="609477"> B -->
-            <input type="checkbox" name="way_points[]" class="way_points" value="1.346658117,103.7332758"> A
-            <input type="checkbox" name="way_points[]" class="way_points" value="1.347293233,103.7345715"> B
-            <input type="checkbox" name="way_points[]" class="way_points" value="1.348205814,103.7338064"> C
-            <input type="checkbox" name="way_points[]" class="way_points" value="1.34607862,103.7352659"> D
-            <input type="checkbox" name="way_points[]" class="way_points" value="1.34868892,103.7317899"> E
-            <input type="checkbox" name="way_points[]" class="way_points" value="1.349737874,103.7318941"> F
-            <input type="checkbox" name="way_points[]" class="way_points" value="1.2962761,103.8500902"> SMU
-        </div>
+            <!-- <input type="checkbox" name="way_points[]" class="way_points" value="1.346658117,103.7332758"> A -->
+            <!-- <input type="checkbox" name="way_points[]" class="way_points" value="1.347293233,103.7345715"> B -->
+            <!-- <input type="checkbox" name="way_points[]" class="way_points" value="1.348205814,103.7338064"> C -->
+            <!-- <input type="checkbox" name="way_points[]" class="way_points" value="1.34607862,103.7352659"> D -->
+            <!-- <input type="checkbox" name="way_points[]" class="way_points" value="1.34868892,103.7317899"> E -->
+            <!-- <input type="checkbox" name="way_points[]" class="way_points" value="1.349737874,103.7318941"> F -->
+            <!-- <input type="checkbox" name="way_points[]" class="way_points" value="1.2962761,103.8500902"> SMU -->
+        <!-- </div> -->
         
         <input type="button" id="go" value="Draw Path" class="submit-btn" />
         </div>
@@ -144,7 +144,7 @@
             </table>
         </div> -->
 
-            <button onclick="hello()">press</button>
+            <!-- <button onclick="hello()">press</button> -->
         <div id="map-layer"></div>
 
         <div id="msg"></div>
@@ -424,6 +424,7 @@
                         // console.log(rows[i].getElementsByTagName("td")[2].innerText);
                         // console.log("-----end-----")
                         // var latLng=$(this).val().split(",");
+                        console.log(rows[i].getElementsByTagName("td")[2].innerText);
                         var postal=rows[i].getElementsByTagName("td")[2].innerText;
                         waypoints.push({
                         // location: {lat: parseFloat(latLng[0]), lng: parseFloat(latLng[1])},
