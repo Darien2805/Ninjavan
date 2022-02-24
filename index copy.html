@@ -165,7 +165,8 @@
                                 </tr>
                             </thead>
                             <tbody>`;
-                        for(var count = 1; count<employee_data.length-1; count++){
+                        // for(var count = 1; count<employee_data.length-1; count++){
+                        for(var count = 1; count<10; count++){
                             var cell_data = employee_data[count].split(",");
                             // console.log(cell_data)
                             table_data += '<tr>';
@@ -414,6 +415,22 @@
                         });
                     // console.log($(this).val()); //lat,lon
                     });
+
+
+                    const rows = document.querySelectorAll("table > tbody > tr");
+                    for(let i = 0; i < rows.length; i++){
+                        // console.log(rows[i].getElementsByTagName("td")[0].innerText);
+                        // console.log(rows[i].getElementsByTagName("td")[1].innerText);
+                        // console.log(rows[i].getElementsByTagName("td")[2].innerText);
+                        // console.log("-----end-----")
+                        // var latLng=$(this).val().split(",");
+                        var postal=rows[i].getElementsByTagName("td")[2].innerText;
+                        waypoints.push({
+                        // location: {lat: parseFloat(latLng[0]), lng: parseFloat(latLng[1])},
+                        location: postal,
+                        stopover: true
+                        });
+                    }
 
 
                     var locationCount = waypoints.length;
