@@ -80,9 +80,9 @@
     <script src="jquery-3.2.1.min.js"></script>
     </head>
     <body onload = "loaddata()">
-        <h1>Ninjavan driver routing</h1>
+        <h1 style="padding: 2rem 0; margin: 10px 40px;">Ninjavan driver routing</h1>
         
-        <div class="lbl-way-points">Way Points</div>
+        <h3 class="lbl-way-points button">Way Points</h3>
         <div>
             
         <!-- <?php
@@ -472,7 +472,9 @@
                             // console.log(response.routes[0].legs[1].distance.text)
                             // console.log(response.routes[0].legs[1].duration.text)
                             
-                            var table = `<table class="table">
+                            var table = `
+                                        <h1>Results</h1>
+                                        <table class="table">
                                             <thead class="table-dark">
                                                 <tr>
                                                     <th>S/N</th>
