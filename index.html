@@ -37,9 +37,6 @@
         display:inline-block;
         margin-right: 15px;
     }
-    table {
-        margin: 20px auto;
-    }
     
     .table {
         border: 1px solid #ccc;
@@ -82,7 +79,7 @@
     </style>
     <script src="jquery-3.2.1.min.js"></script>
     </head>
-    <body>
+    <body onload = "loaddata()">
         <h1>Ninjavan driver routing</h1>
         
         <div class="lbl-way-points">Way Points</div>
@@ -109,7 +106,8 @@
         
         <input type="button" id="go" value="Draw Path" class="submit-btn" />
         </div>
-        <div style="padding: 4rem 0">
+        <div id="tabledata"></div>
+        <!-- <div style="padding: 4rem 0">
             <table id="table" class="table">
                 <thead>
                     <tr>
@@ -144,13 +142,58 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </div> -->
 
             <button onclick="hello()">press</button>
         <div id="map-layer"></div>
 
         <div id="msg"></div>
         <script>
+            function loaddata(){
+                $.ajax({
+                    url:"test.csv",
+                    dataType:"text",
+                    success:function(data){
+                        var employee_data = data.split(/\r?\n|\r/);
+                        var table_data = `
+                        <table id = "table" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                    <th>Postal Code</th>
+                                </tr>
+                            </thead>
+                            <tbody>`;
+                        for(var count = 0; count<employee_data.length; count++){
+                            var cell_data = employee_data[count].split(",");
+                            table_data += '<tr>';
+                                for(var cell_count=0; cell_count<cell_data.length; cell_count++){
+                                    if (count>0){
+                                        if (cell_count == 3){
+                                            var timestart = cell_data[cell_count];
+                                            var data = timestart.replace(/"/g,"");
+                                            table_data += '<td>'+data+'</td>';
+                                        }else if (cell_count == 4){
+                                            var timeend = cell_data[cell_count];
+                                            var data = timeend.replace(/"/g,"");
+                                            table_data += '<td>'+data+'</td>';
+                                        }else if (cell_count == 9){
+                                            var postal_code = cell_data[cell_count];
+                                            var data = postal_code.replace(/"/g,"");
+                                            table_data += '<td>'+data+'</td>';
+                                        }
+                                    }
+                                }
+                            table_data += '</tr>';
+                        }
+                        table_data += `</tbody></table>`;
+                        $('#tabledata').html(table_data);
+                    }
+                });
+            }
+
+
             var map;
             var waypoints;
             function initMap() {
