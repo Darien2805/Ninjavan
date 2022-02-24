@@ -3,7 +3,6 @@
         <meta charset="utf-8" />
         <title>HTML DOM - Drag and drop table row</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="/css/demo.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
             rel="stylesheet"
@@ -58,6 +57,7 @@
                         <th data-type="number">No.</th>
                         <th>First name</th>
                         <th>Last name</th>
+                        <th>Last name</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -65,34 +65,41 @@
                         <td>1</td>
                         <td>Andrea</td>
                         <td>Ross</td>
+                        <td>Ross</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Penelope</td>
+                        <td>Mills</td>
                         <td>Mills</td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Sarah</td>
                         <td>Grant</td>
+                        <td>Grant</td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Vanessa</td>
+                        <td>Roberts</td>
                         <td>Roberts</td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Oliver</td>
                         <td>Alsop</td>
+                        <td>Alsop</td>
                     </tr>
                     <tr>
                         <td>6</td>
+                        <td>Jennifer</td>
                         <td>Jennifer</td>
                         <td>Forsyth</td>
                     </tr>
                     <tr>
                         <td>7</td>
+                        <td>Michelle</td>
                         <td>Michelle</td>
                         <td>King</td>
                     </tr>
@@ -100,15 +107,18 @@
                         <td>8</td>
                         <td>Steven</td>
                         <td>Kelly</td>
+                        <td>Kelly</td>
                     </tr>
                     <tr>
                         <td>9</td>
                         <td>Julian</td>
                         <td>Ferguson</td>
+                        <td>Ferguson</td>
                     </tr>
                     <tr>
                         <td>10</td>
                         <td>Chloe</td>
+                        <td>Ince</td>
                         <td>Ince</td>
                     </tr>
                 </tbody>
@@ -312,7 +322,13 @@
             
             function hello() {
                 const rows = document.querySelectorAll("table > tbody > tr");
-                console.log(rows);
+                // console.log(rows);
+                for(let i = 0; i < rows.length; i++){
+                    console.log(rows[i].getElementsByTagName("td")[1].innerText);
+                    console.log(rows[i].getElementsByTagName("td")[2].innerText);
+                    console.log(rows[i].getElementsByTagName("td")[3].innerText);
+                    console.log("-----end-----")
+                }
             }
 
         </script>
