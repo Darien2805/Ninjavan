@@ -2,7 +2,7 @@
 
 * TAN TING CHER BENJAMIN (benjamintan.2020@scis.smu.edu.sg)<br />
 * DARIEN TAN SHI FENG (darien.tan.2020@scis.smu.edu.sg)<br />
-* LIM TZE HWEE (tsehwee.lim.2020@scis.smu.edu.sg)<br />
+* LIM TSE HWEE (tsehwee.lim.2020@scis.smu.edu.sg)<br />
 * CHEONG WEI SOON (wscheong.2020@scis.smu.edu.sg)<br />
 # Project Overview
 Our group, The Minions has decided to work on a solution for drivers, that would help ease their difficulties when delivering a parcel from one point to another. Thus, our web application will help solve this need.
