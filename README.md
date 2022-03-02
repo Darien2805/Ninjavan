@@ -13,4 +13,6 @@ Our group, The Minions has decided to work on a solution for drivers, that would
 
 # Project Demo
 ![Demo 1](images/Capture1.PNG)
+*Schedule which is click and drop and click the button for the route to be generated*
 ![Demo 3](images/Capture3.PNG)
+*Table showing the distance and duration of each trip, the same postal codes will be clustered together. Routes are shown in the map*
